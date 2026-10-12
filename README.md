@@ -1,8 +1,8 @@
-# TRACE
+# TRACES
 
 ## A simple framework for reporting and troubleshooting problems
 
-> **When something doesn't work, TRACE the problem before trying to diagnose it.**
+> **When something doesn't work, use TRACES to _define_ the problem before trying to _diagnose_ it.**
 
 If you've ever tried to help someone who says:
 
@@ -10,7 +10,7 @@ If you've ever tried to help someone who says:
 
 you have probably experienced the problem with that statement: **it tells you that there is a problem, but very little about the problem itself.**
 
-TRACE is a simple framework for turning a vague problem report into useful information.
+TRACES is a simple framework for turning a vague problem report into useful information.
 
 It is intended for anyone who needs to communicate a problem clearly or help someone else troubleshoot one:
 
@@ -21,13 +21,13 @@ It is intended for anyone who needs to communicate a problem clearly or help som
 - Maintenance and service personnel
 - Anyone who regularly finds themselves helping other people solve problems
 
-You do **not** need to understand how the system works to use TRACE.
+You do **not** need to understand how the system works to use TRACES.
 
 ---
 
 ## The basic idea
 
-A useful problem report answers five questions:
+A useful problem report answers six questions:
 
 | | | | |
 |---|---|---|---|
@@ -36,6 +36,7 @@ A useful problem report answers five questions:
 | **A**| **Achieve** | What did you want or expect to happen? | Establish the intended result. |
 | **C**| **Clues** | What evidence or additional observations do you have? | Capture information that may help explain or reproduce the problem. |
 | **E**| **Extent** | What is the extent of your observations? What is affected, and what still works? | Establish the boundaries of what you actually know. |
+| **S**| **Steps** | What steps would someone else take to reproduce the issue you've observed? | Give enough information for an independent third party to verify whether they see the same result. |
 
 The goal is **not** to produce a perfect technical diagnosis.
 
@@ -188,7 +189,7 @@ That tells the troubleshooter much more about the **boundary of the problem**.
 
 ---
 
-# A Complete TRACE Example
+# A Complete TRACES Example
 
 Suppose someone says:
 
@@ -196,7 +197,7 @@ Suppose someone says:
 
 That's a problem statement, but it leaves many questions unanswered.
 
-A TRACE report might look like this:
+A TRACES report might look like this:
 
 ### **T — Task**
 
@@ -234,7 +235,7 @@ Consider:
 
 > "The door is stuck."
 
-Using TRACE:
+Using TRACES:
 
 **T — Task**
 
@@ -270,7 +271,7 @@ Suppose someone reports:
 
 > "The website isn't working."
 
-TRACE turns that into:
+TRACES turns that into:
 
 **T — Task**
 
@@ -298,7 +299,7 @@ They just need to report what they observed.
 
 ---
 
-# Why TRACE Works
+# Why TRACES Works
 
 There are two common problems with troubleshooting conversations.
 
@@ -314,7 +315,7 @@ There is almost nothing to work with.
 
 That may be correct, but it may also send the troubleshooting effort down the wrong path.
 
-TRACE creates a middle ground:
+TRACES creates a middle ground:
 
 > **Describe the problem clearly without requiring the reporter to diagnose it.**
 
@@ -332,7 +333,7 @@ A technician does not need a complete theory of failure before reporting the sym
 
 # Good Troubleshooting Starts With Good Observations
 
-TRACE is deliberately built around **observations rather than assumptions**.
+TRACES is deliberately built around **observations rather than assumptions**.
 
 Compare:
 
@@ -344,13 +345,13 @@ with:
 
 The second report contains more useful information while making fewer assumptions.
 
-That is the habit TRACE is intended to encourage.
+That is the habit TRACES is intended to encourage.
 
 ---
 
-# Five Habits That Make a TRACE Better
+# Five Habits That Make a TRACES Better
 
-These are supporting principles, not additional steps in the TRACE acronym:
+These are supporting principles, not additional steps in the TRACES acronym:
 
 - **Describe, don't diagnose.** Focus on observed behavior rather than presumed cause.
 - **Report what didn't happen.** Missing expected behavior can be important evidence.
@@ -360,15 +361,15 @@ These are supporting principles, not additional steps in the TRACE acronym:
 
 ---
 
-# TRACE Is a Communication Framework, Not a Diagnostic Procedure
+# TRACES Is a Communication Framework, Not a Diagnostic Procedure
 
-TRACE does not tell you how to repair a system.
+TRACES does not tell you how to repair a system.
 
 It helps answer a more fundamental question:
 
 > **What exactly are we trying to troubleshoot?**
 
-Sometimes a TRACE report will simply give a troubleshooter enough information to begin investigating.
+Sometimes a TRACES report will simply give a troubleshooter enough information to begin investigating.
 
 Sometimes it will dramatically narrow the search space.
 
@@ -380,7 +381,7 @@ That is not a failure of the framework. **Clearly defining the problem is part o
 
 # Quick Reference
 
-> ## TRACE
+> ## TRACES
 >
 > **T — Task**  
 > What were you doing?
