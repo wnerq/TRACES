@@ -2,7 +2,7 @@
 
 ## A simple framework for reporting and troubleshooting problems
 
-> **When something doesn't work, use TRACES to _define_ the problem before trying to _diagnose_ it.**
+> **When something doesn't work, use TRACES to *define* the problem before trying to *diagnose* it.**
 
 If you've ever tried to help someone who says:
 
@@ -14,7 +14,7 @@ TRACES is a simple framework for turning a vague problem report into useful info
 
 It is intended for anyone who needs to communicate a problem clearly or help someone else troubleshoot one:
 
-- Entry-level engineers and technicians
+- Engineers and technicians
 - College students learning engineering or technical disciplines
 - Operators and users of equipment or software
 - IT and technical support
@@ -29,14 +29,14 @@ You do **not** need to understand how the system works to use TRACES.
 
 A useful problem report answers six questions:
 
-| | | | |
-|---|---|---|---|
-| **T**| **Task**  | What were you doing? | Establish the situation and context. |
-| **R**| **Result**  | What actually happened? | Describe the observed result. |
-| **A**| **Achieve** | What did you want or expect to happen? | Establish the intended result. |
-| **C**| **Clues** | What evidence or additional observations do you have? | Capture information that may help explain or reproduce the problem. |
-| **E**| **Extent** | What is the extent of your observations? What is affected, and what still works? | Establish the boundaries of what you actually know. |
-| **S**| **Steps** | What steps would someone else take to reproduce the issue you've observed? | Give enough information for an independent third party to verify whether they see the same result. |
+|       |             |                                                                                  |                                                                                                    |
+| ----- | ----------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| **T** | **Task**    | What were you doing?                                                             | Establish the situation and context.                                                               |
+| **R** | **Result**  | What actually happened?                                                          | Describe the observed result.                                                                      |
+| **A** | **Achieve** | What did you want or expect to happen?                                           | Establish the intended result.                                                                     |
+| **C** | **Clues**   | What evidence or additional observations do you have?                            | Capture information that may help explain or reproduce the problem.                                |
+| **E** | **Extent**  | What is the extent of your observations? What is affected, and what still works? | Establish the boundaries of what you actually know.                                                |
+| **S** | **Steps**   | What steps would someone else follow to reproduce the issue you've observed?       | Give enough information for an independent third party to verify whether they see the same result. |
 
 The goal is **not** to produce a perfect technical diagnosis.
 
@@ -109,7 +109,7 @@ This is an important question because people reporting a problem often skip it. 
 
 Now we have a clear comparison:
 
-**Expected:** Document prints and leaves the queue.  
+**Expected:** Document prints and leaves the queue.\
 **Actual:** Document remains in the queue and nothing prints.
 
 That difference is the problem we need to investigate.
@@ -158,7 +158,7 @@ A screenshot of an error is often more useful than trying to remember exactly wh
 
 ### What is the extent of your observations?
 
-**What is affected, and what still works?**
+**How large or constrained is the problem?**
 
 Extent establishes the boundaries of the problem.
 
@@ -166,7 +166,6 @@ This can include:
 
 - What works
 - What doesn't work
-- What you have actually checked
 - Whether the problem happens every time or only sometimes
 - Whether the problem affects one thing or several
 - Whether the problem occurs under particular conditions
@@ -174,6 +173,32 @@ This can include:
 The important distinction is:
 
 > **Report what you checked or observed—not what you assume.**
+
+# S — Steps
+
+### What steps can someone else follow to reproduce the issue you've observed?
+
+**Give enough information for an independent third party to perform the same actions and determine whether they see the same result.**
+
+Steps establish how the observed result can be reproduced.
+
+This can include:
+
+- The starting conditions
+- The sequence of actions taken
+- Specific inputs, settings, or configurations
+- The equipment, software, or environment involved
+- What happened at each significant step
+- The point at which the observed result occurred
+- Whether the result was reproducible, intermittent, or occurred only once
+- Any relevant timing or delays between steps
+
+The important distinction is:
+
+> **Describe the procedure that produced the result—not a diagnosis of why it happened.**
+
+If the issue cannot currently be reproduced, say so. **“Unable to reproduce” is useful information.** It is better to document what was actually done than to invent a procedure based on assumptions.
+
 
 ### Example
 
@@ -219,6 +244,10 @@ A TRACES report might look like this:
 
 > "The phone still turns on and works normally. I tried two cables with the same result. I have not yet tried a different power adapter or outlet."
 
+### **S — Steps**
+
+> "With the phone powered on and the battery below 20%, connect the charging cable to the phone and a power adapter. Observe whether the charging symbol appears and whether the battery percentage increases. Disconnect the cable, wait a few seconds, and repeat with a second cable."
+
 Notice what the person **didn't** have to say:
 
 > "I think the charging port is damaged."
@@ -257,6 +286,10 @@ Using TRACES:
 
 > "I tried the key three times with the same result. The key works normally in the other door that uses the same key. I haven't tried another key in this lock."
 
+**S — Steps**
+
+> "Insert the key fully into the front-door lock and attempt to turn it in the direction used to unlock the door. Repeat the attempt three times and observe whether the key turns and the door unlocks."
+
 That report is useful even though the person knows nothing about locks.
 
 They have not diagnosed the problem.
@@ -292,6 +325,10 @@ TRACES turns that into:
 **E — Extent**
 
 > "Two other websites load normally. I tried the same website three times and got the same error. I haven't tried another computer."
+
+**S — Steps**
+
+> "From the laptop, open a web browser and enter the website address. Press Enter and observe the result. Repeat the attempt three times and record the error displayed. Then open two other websites to compare their behavior."
 
 Again, the reporter does not need to know what DNS is.
 
@@ -383,20 +420,23 @@ That is not a failure of the framework. **Clearly defining the problem is part o
 
 > ## TRACES
 >
-> **T — Task**  
+> **T — Task**\
 > What were you doing?
 >
-> **R — Result**  
+> **R — Result**\
 > What actually happened?
 >
-> **A — Achieve**  
+> **A — Achieve**\
 > What did you want or expect to happen?
 >
-> **C — Clues**  
+> **C — Clues**\
 > What evidence or additional observations do you have?
 >
-> **E — Extent**  
+> **E — Extent**\
 > What is the extent of your observations? What is affected, and what still works that you actually checked or observed?
+>
+> **S — Steps**\
+> What steps would someone else take to reproduce the issue you've observed?
 
 ## The short version
 
@@ -406,10 +446,11 @@ When someone says:
 
 ask:
 
-> **Task?**  
-> **Result?**  
-> **Achieve?**  
-> **Clues?**  
-> **Extent?**
+> **Task?**\
+> **Result?**\
+> **Achieve?**\
+> **Clues?**\
+> **Extent?**\
+> **Steps?**
 
 Then start troubleshooting.
